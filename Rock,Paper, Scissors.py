@@ -14,9 +14,9 @@ will return the winner at the end.
 import random
 
 def ai():
-    number = random.randint(1,4)
+    number = random.randint(1,3)
+    global aiinput
     if number == 1:
-        global aiinput
         aiinput = ("rock")
         print(("The choice of computer is: "),aiinput)
     elif number == 2:
