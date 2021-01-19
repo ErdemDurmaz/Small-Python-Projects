@@ -5,9 +5,16 @@
 # Compute the average of the numbers and
 # print out the average as an integer.
 import re
-
+container = []
+numbers = []
 fhandler = open('mbox-short.txt')
+
 for line in fhandler:
-    container = re.findall("^New Revision:.*([0-9]+)",line)
-    if len(container) > 0:
-        print(container)
+    container += re.findall("^New Revision: *([0-9]+)",line)
+
+
+for string in container:
+    numbers.append(int(string))
+
+average = (sum(numbers)/ len(numbers))
+print(int(average))
