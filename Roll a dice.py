@@ -9,14 +9,14 @@ The program should also include a function that can randomly grab a number withi
 '''
 import random
 def roll():
-    number = random.randrange(0,7)
+    number = random.randrange(1,7)
     print (number)
 while True:
     print("Welcome to Dice roller")
     usrinp = input("To roll a dice input roll: ")
     if usrinp == ("roll"):
         roll()
-        secondinput = input("Would you like to roll the dice again? ")
+        secondinput = input("Would you like to roll the dice again? Prompt yes: ")
         if secondinput == ("yes"):
             roll()
         else:

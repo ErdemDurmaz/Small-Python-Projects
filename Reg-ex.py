@@ -8,13 +8,10 @@ import re
 container = []
 numbers = []
 fhandler = open('mbox-short.txt')
-
 for line in fhandler:
     container += re.findall("^New Revision: *([0-9]+)",line)
-
-
 for string in container:
     numbers.append(int(string))
-
 average = (sum(numbers)/ len(numbers))
+print(numbers)
 print(int(average))
