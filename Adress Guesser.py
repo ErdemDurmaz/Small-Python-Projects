@@ -43,10 +43,7 @@ while True:
         continue
 
     print(json.dumps(js, indent=4))
-    country_code = js['results'][0]['address_components'][4]['short_name']
     lat = js['results'][0]['geometry']['location']['lat']
     lng = js['results'][0]['geometry']['location']['lng']
-    print('lat', lat, 'lng', lng)
-    print("Country code",country_code)
     location = js['results'][0]['formatted_address']
     print("My guess is",location)
