@@ -13,7 +13,8 @@ html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')
 count = 0
 # Retrieve all of the anchor tags
-tags = soup('p')
+tags = soup('a')
 for tag in tags:
     count += 1
-    print (count)
+    print (tag)
+    
